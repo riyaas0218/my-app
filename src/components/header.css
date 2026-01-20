@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: #3f78e0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-item img {
+  width: 16px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  z-index: 999;
+}
+
+/* Sticky */
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #343f52;
+  font-weight: 500;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-btn {
+  background: #3f78e0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* ===== Moto G45 Mobile View ===== */
+@media (max-width: 480px) {
+
+  /* Top bar */
+  .topbar {
+    padding: 10px 16px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .top-item img {
+    width: 14px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    font-size: 26px;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 32px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-btns button {
+    width: 100%;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+}
